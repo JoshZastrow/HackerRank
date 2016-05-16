@@ -1,0 +1,15 @@
+input()
+
+#get set
+A = set(map(int, input().split()))
+
+#run through scenarios
+for _ in range(int(input())):
+    
+    #get set mutation command, modification set
+    c, s = input().split()[0], set(map(int, input().split()))
+    
+    #use get attributions to use the string as a command
+    getattr(A, c)(s)
+        
+print(sum(A))        
